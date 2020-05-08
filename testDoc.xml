@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <body>
 	<nav lang="en">
-		<home></home>
-		<dictionary></dictionary>
-		<grammar></grammar>
-		<games></games>
+		<home>home</home>
+		<dictionary>dictionary</dictionary>
+		<grammar>grammar</grammar>
+		<games>games</games>
 	</nav>
 	<homebutton>
 		<firstgrade>1st Grade</firstgrade>
