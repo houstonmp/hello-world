@@ -8,12 +8,12 @@
 <script>
 function parseData(text){
     var xmlDoc = text.responseXML;
-    var demo1 = document.getElementById("demo1").innerHTML;
-    var demo2 = document.getElementById("demo1").innerHTML;
+    var demo1 = document.getElementById("demo1");
+    var demo2 = document.getElementById("demo1");
     var i,j;
     
-    demo1 = xmlDoc.getElementsByTagName("nav")[0];
-    demo2 = xmlDoc.getElementsByTagName("homebuttons")[0];
+    demo1.innerHTML = xmlDoc.getElementsByTagName("nav")[0];
+    demo2.innerHTML = xmlDoc.getElementsByTagName("homebuttons")[0];
 }
     
 var xhttp = new XMLHttpRequest();
