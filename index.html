@@ -11,17 +11,9 @@ function parseData(text){
     var demo1 = document.getElementById("demo1").innerHTML;
     var demo2 = document.getElementById("demo1").innerHTML;
     var i,j;
-    for(i=0;i<xmlDoc.getElementsByTagName("nav").length;i++){
-        for(j=0;j<xmlDoc.getElementsByTagName("nav").childNodes.length;j++){
-            demo1 += xmlDoc.getElementsByTagName("nav")[i].childNodes[j].value + "/n";
-        }   
-    }
     
-    for(i=0;i<xmlDoc.getElementsByTagName("homebutton").length;i++){
-        for(j=0;j<xmlDoc.getElementsByTagName("nav").childNodes.length;j++){
-            demo1 += xmlDoc.getElementsByTagName("nav")[i].childNodes[j].value + "/n";
-        }   
-    }
+    demo1 = xmlDoc.getElementsByTagName("nav")[0];
+    demo2 = xmlDoc.getElementsByTagName("homebuttons")[0];
 }
     
 var xhttp = new XMLHttpRequest();
