@@ -7,12 +7,14 @@
 <p id="demo2"></p>
 <script>
 function parseData(text){
+    break;
     var xmlDoc = text.responseXML;
     var demo1 = document.getElementById("demo1");
     var demo2 = document.getElementById("demo1");
     var i,j;
-    
+    break;
     demo1.innerHTML = xmlDoc.getElementsByTagName("nav")[0];
+    break;
     demo2.innerHTML = xmlDoc.getElementsByTagName("homebuttons")[0];
 }
     
