@@ -1,14 +1,36 @@
 <html>
 <body>
 
-<p id="demo"></p>
-
+<h1>This is the nav</h1>
+<p id="demo1"></p>
+<h1>These are the home buttons</h1>
+<p id="demo2"></p>
 <script>
+function parseData(text){
+    var xmlDoc = text.responseXML;
+    var demo1 = document.getElementById("demo1").innerHTML;
+    var demo2 = document.getElementById("demo1").innerHTML;
+    var i,j;
+    for(i=0;i<xmlDoc.getElementsbyTagName("nav").length){
+        for(j=0;j<xmlDoc.getElementsbyTagName("nav").childNode.length){
+            demo1 += xmlDoc.getElementsbyTagName("nav")[i].childNode[j].value + "/n";
+        }   
+    }
+    
+    for(i=0;i<xmlDoc.getElementsbyTagName("homebutton").length){
+        for(j=0;j<xmlDoc.getElementsbyTagName("nav").childNode.length){
+            demo1 += xmlDoc.getElementsbyTagName("nav")[i].childNode[j].value + "/n";
+        }   
+    }
+}
+    
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
        // Typical action to be performed when the document is ready:
-       document.getElementById("demo").innerHTML = xhttp.responseText;
+       
+       parseData(this);
+       
     }
 };
 xhttp.open("GET", "testDoc.xml", true);
